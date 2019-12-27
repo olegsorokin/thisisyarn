@@ -1,0 +1,16 @@
+.social {
+  &__button {margin-right: 20px; padding: 10px 15px; line-height: 16px; font-size: 0.75rem;
+    text-align: center; border: 0; border-radius: 5px; color: $white; cursor: pointer;transition: all 0.4s;
+    &:last-child {margin-right: 0;}
+    &:hover, &:focus {box-shadow: 0 1px 3px 0 rgba($dark-pink, 0.9); outline: none; transition: all 0.2s;}
+    &:active {transition: all 0.1s;}
+    &--facebook {background-color: #2f4a85;}
+    &--twitter {background-color: #3d9dca;}
+    &--instagram {background-color: #da4855;}
+    .icon {margin-right: 5px;}
+  }
+
+  @media (max-width: $desktop-width) {
+    &__button {margin-bottom: 10px;}
+  }
+}

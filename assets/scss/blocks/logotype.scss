@@ -1,0 +1,12 @@
+.logotype {display: inline-block; vertical-align: middle; margin-bottom: 5px; font-size: 0; background-size: contain;
+  background-repeat: no-repeat; background-position: center center;
+  &--paypal {width: 124px; height: 33px; background-image: url(/img/logo-paypal.svg);}
+  &--visa {width: 100px; height: 30px; background-image: url(/img/logo-visa.svg);}
+  &--mastercard {width: 56px; height: 44px; background-image: url(/img/logo-mastercard.svg);}
+
+  @media (max-width: $tablet-width) {
+    &--paypal {width: 83px; height: 22px;}
+    &--visa {width: 66px; height: 20px;}
+    &--mastercard {width: 48px; height: 36px;}
+  }
+}

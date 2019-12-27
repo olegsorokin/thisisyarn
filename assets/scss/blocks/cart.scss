@@ -1,0 +1,8 @@
+.cart {
+  &__header {background-image: url(/img/cart-bg.jpg);}
+  &__title {color: $white;}
+  &__button-continue {margin-bottom: 30px;}
+  &__empty {padding: 10px 0 40px; color: $dark-gray; text-align: center;
+    &-title {margin-top: 0; margin-bottom: 10px; font-size: 1.5rem;}
+  }
+}

@@ -1,0 +1,30 @@
+.header {
+  &__bar {background-color: $dark-pink; color: $light-yellow; font-size: 0;}
+  &__delivery-menu {float: left;}
+  &__user-bar {float: right;}
+  &__link {padding: 15px 20px; line-height: 20px; color: $light-yellow; text-align: center; font-size: 0.875rem;
+    transition: background-color 0.4s;
+    &:hover, &:focus {background-color: $dark-pink--hover; outline: none; transition: background-color 0.2s;}
+  }
+  &__wrap {display: flex; align-items: center; flex-wrap: wrap; padding: 40px 0;
+    &:after {content: ''; clear: both; display: table;}
+  }
+  &__logo {margin-top: -20px; margin-right: auto;}
+  &__search {margin-right: 30px;}
+  &__whatsapp {margin-right: 40px; line-height: 40px; font-weight: 600;
+    &-icon {display: inline-block; vertical-align: top; width: 40px; height: 40px; margin-right: 10px; border-radius: 8px;
+      font-size: 0; background: #1bd741 url('/img/icons/icon-whatsapp.svg') center center no-repeat;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    &__bar .container {padding: 0;}
+    &__delivery-menu {display: none;}
+    &__wrap {padding: 30px 0; flex-direction: column;}
+    &__logo {margin-bottom: 20px;}
+    &__search {width: 100%; margin-right: 0; margin-bottom: 15px;
+      .form__control {width: 100%;}
+    }
+    &__whatsapp {margin-right: 0; margin-bottom: 15px;}
+  }
+}

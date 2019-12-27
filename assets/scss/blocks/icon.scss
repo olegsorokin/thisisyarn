@@ -1,0 +1,11 @@
+.icon {display: inline-block; vertical-align: top; width: 20px; height: 20px; font-size: 0;
+  &--close {background: url('/img/icons/icon-cross.svg') center center no-repeat;}
+  &--cart {background: url('/img/icons/icon-cart.svg') center center no-repeat;}
+  &--search {background: url('/img/icons/icon-search.svg') center center no-repeat;}
+  &--user {background: url('/img/icons/icon-user.svg') center center no-repeat;}
+  &--facebook {width: 25px; height: 25px; background: url('/img/icons/icon-facebook.svg') center center no-repeat;}
+  &--instagram {width: 25px; height: 25px; background: url('/img/icons/icon-instagram.svg') center center no-repeat;}
+  &--small-facebook {width: 16px; height: 16px; background: url('/img/icons/icon-small-facebook.svg') center center no-repeat;}
+  &--small-twitter {width: 16px; height: 16px; background: url('/img/icons/icon-small-twitter.svg') center center no-repeat;}
+  &--small-instagram {width: 16px; height: 16px; background: url('/img/icons/icon-small-instagram.svg') center center no-repeat;}
+}

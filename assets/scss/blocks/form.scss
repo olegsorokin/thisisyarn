@@ -1,0 +1,52 @@
+.form {
+  &__group {margin-bottom: 15px;}
+  &__control {display: block; width: 100%; padding: 10px 15px; font-size: 1rem; line-height: 20px;
+    border: 1px solid rgba($dark-gray, 0.5); border-radius: 5px; transition: all 0.4s; box-sizing: border-box;
+    &:focus {border-color: $dark-pink; outline: none; transition: all 0.2s;}
+    &--large {padding-top: 15px; padding-bottom: 15px; border-radius: 10px;}
+  }
+  &__checkbox, &__radio {position: relative; display: block; padding-left: 30px; font-size: 0.875rem; line-height: 20px;
+    cursor: pointer;
+    &::before {content: ''; position: absolute; top: 2px; left: 0; width: 15px; height: 15px; border: 1px solid $dark-gray;
+      border-radius: 2px;
+    }
+    &-input {display: none;}
+  }
+  &__checkbox {
+    &::after {content: '✔'; position: absolute; display: none; top: 2px; left: 0; width: 17px; height: 17px;
+      line-height: 15px; text-align: center; color: $black; pointer-events: none;
+    }
+    &-input:checked ~ .form__checkbox::after {display: block;}
+  }
+  &__radio {
+    &::before {border-radius: 50%;}
+    &::after {content: ''; position: absolute; display: none; top: 6px; left: 4px; width: 9px; height: 9px;
+      background-color: $dark-pink; border-radius: 50%;
+    }
+    &-input:checked ~ .form__radio::after {display: block;}
+  }
+  &__textarea {display: block; width: 100%; padding: 15px 15px; border: 1px solid rgba($dark-gray, 0.5);
+    border-radius: 5px; resize: none; box-sizing: border-box; font-size: 0.875rem; transition: all 0.4s;
+    &:focus {border-color: $dark-pink; outline: none; transition: all 0.2s;}
+  }
+  &__number {display: flex; vertical-align: top; border: 1px solid $dark-gray; border-radius: 3px; overflow: hidden;
+    &-wrap {display: inline-block; vertical-align: top;}
+    .form__control {flex-shrink: 0; text-align: center; width: 42px; padding-right: 5px; padding-left: 5px; border-width: 0 1px;
+      border-radius: 0; font-weight: 700;
+    }
+    &-button {flex-shrink: 0; width: 40px; background-color: #fff; border: 0; margin: 0; padding: 10px; font-weight: 600;
+      text-align: center; line-height: 20px; color: $gray; cursor: pointer; transition: all 0.4s;
+      &:hover, &:focus {background-color: rgba($dark-gray, 0.2); outline: none; transition: all 0.2s;}
+      &:active {transition: all 0.1s;}
+      &:disabled, &.disabled {background: rgba($dark-gray, 0.3); color: $dark-gray; pointer-events: none;}
+    }
+    &--large {
+      .form__control {padding-top: 15px; padding-bottom: 15px;}
+      &-button {padding-top: 15px; padding-bottom: 15px;}
+    }
+  }
+  &__error {display: block; padding-top: 5px; font-size: 0.75rem; color: $red;}
+  &__label {display: block; font-size: 0.75rem; margin-bottom: 5px;
+    &-required {color: $dark-pink;}
+  }
+}

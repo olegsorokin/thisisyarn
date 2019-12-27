@@ -1,0 +1,8 @@
+.search {position: relative;
+  .icon {position: absolute; top: 50%; right: 15px; transform: translateY(-50%); opacity: 0.25; transition: opacity 0.4s;
+    pointer-events: none;
+  }
+  .form__control {padding-right: 40px;
+    &:focus + .icon {opacity: 0.5; transition: opacity 0.2s;}
+  }
+}

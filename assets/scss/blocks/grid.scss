@@ -1,0 +1,42 @@
+.container {width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 40px; box-sizing: border-box;
+  &:after {content: ''; clear: both; display: table;}
+  &--text {max-width: 720px;
+    &-center {text-align: center;}
+    h2, h3, h4 {margin: 24px 0 12px;
+      &:first-child {margin-top: 0;}
+    }
+    h2 {margin-top: 48px; font-size: 1.75rem; line-height: 36px;}
+    h2 + h3 {margin-top: 12px;}
+    h2 + p {margin-top: 24px;}
+    h3 {margin-top: 36px; font-size: 1.25rem; line-height: 24px;}
+    p {margin: 12px 0; line-height: 24px;}
+  }
+}
+.row {margin: 0 -15px; display: flex; flex-wrap: wrap;}
+.col {padding: 0 15px; min-height: 1px; box-sizing: border-box; flex: 1 0 0;
+  &-8 {max-width: 8.33%; flex-basis: 8.33%;}
+  &-12 {max-width: 12.5%; flex-basis: 12.5%;}
+  &-16 {max-width: 16.66%; flex-basis: 16.66%;}
+  &-20 {max-width: 20%; flex-basis: 20%;}
+  &-25 {max-width: 25%; flex-basis: 25%;}
+  &-33 {max-width: 33.33%; flex-basis: 33.33%;}
+  &-50 {max-width: 50%; flex-basis: 50%;}
+  &-66 {max-width: 66.66%; flex-basis: 66.66%}
+  &-75 {max-width: 75%; flex-basis: 75%;}
+  &-100 {max-width: 100%; flex-basis: 100%;}
+}
+
+@media screen and (max-width: $desktop-width) {
+  .col-tab-25 {max-width: 25%; flex-basis: 25%;}
+  .col-tab-33 {max-width: 33.33%; flex-basis: 33.33%;}
+  .col-tab-50 {max-width: 50%; flex-basis: 50%;}
+}
+
+@media (max-width: $tablet-width) {
+  .container {padding: 0 15px;}
+  .col {max-width: 100%; flex-basis: 100%;
+    &-mobile-25 {max-width: 25%; flex-basis: 25%;}
+    &-mobile-33 {max-width: 33.33%; flex-basis: 33.33%;}
+    &-mobile-50 {max-width: 50%; flex-basis: 50%;}
+  }
+}

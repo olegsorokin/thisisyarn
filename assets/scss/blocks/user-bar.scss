@@ -1,0 +1,18 @@
+.user-bar {
+  &__link {display: inline-block; font-size: 0.875rem;
+    .icon {margin-right: 5px;}
+  }
+  &__cart {position: relative; display: inline-block; width: 120px; margin-top: -5px; padding: 20px 20px 15px;
+    line-height: 20px; font-weight: 600; font-size: 0.875rem; background-image: linear-gradient(to top, #deb352, #ffd36f);
+    transition: all 0.4s;
+    &:after {content: ''; position: absolute; top: 100%; right: 0; left: 0; border-color: #deb352 transparent;
+      border-style: solid; border-width: 15px 80px 0 80px; height: 0; width: 0;}
+    &:hover, &:focus {transform: translateY(5px); transition: all 0.2s;}
+    &-counter {position: relative; margin-right: 15px;
+      &-value {position: absolute; right: -7px; top: -7px; min-width: 15px; height: 15px; padding: 1px; line-height: 13px;
+        border-radius: 50%; font-size: 10px; font-weight: 300; color: $light-yellow; background-color: $dark-pink;
+        text-align: center; box-sizing: border-box;
+      }
+    }
+  }
+}

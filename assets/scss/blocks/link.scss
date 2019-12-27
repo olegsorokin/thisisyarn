@@ -1,0 +1,7 @@
+.link {color: $black; transition: all 0.4s;
+  &:hover, &:focus, &.nuxt-link-active {color: $dark-pink; outline: none; transition: all 0.2s;}
+  &--underline {border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    &:hover, &:focus, &.nuxt-link-active, .active {border-color: rgba($dark-pink, 0.75);}
+  }
+  &:disabled, &.disabled {color: $dark-gray; pointer-events: none;}
+}

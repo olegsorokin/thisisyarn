@@ -1,0 +1,30 @@
+.table {width: 100%; border-collapse: collapse;
+  &-scroll {max-width: 100%; overflow-x: auto;}
+  /* regular tables */
+  th {padding: 5px 10px; border-bottom: 1px solid #e6e6e6; vertical-align: top; text-align: left;
+    &:first-child {padding-left: 0;}
+    &:last-child {padding-right: 0;}
+  }
+  td {padding: 10px; border-bottom: 1px solid #e6e6e6; vertical-align: top;
+    &:first-child {padding-left: 0;}
+    &:last-child {padding-right: 0;}
+  }
+
+  /* div-based tables */
+  &__head, &__title {font-weight: 600;}
+  &__title {display: none; margin-bottom: 5px; text-transform: uppercase; font-size: 0.75rem;}
+  &__row {display: flex; border-bottom: 1px solid #e6e6e6;
+    &:after {content: ''; display: block; clear: both;}
+  }
+  &__cell {min-height: 1px; padding: 10px; box-sizing: border-box;
+    &:first-child {padding-left: 0;}
+    &:last-child {padding-right: 0;}
+  }
+  &__head {
+    .table__cell {padding-top: 5px; padding-bottom: 5px;}
+  }
+
+  @media (max-width: $tablet-width) {
+    &__title {display: block;}
+  }
+}
